@@ -46,7 +46,7 @@ I wanted to check what stats or features were indicators of a prospect's perform
 
 ### Holdout error by model
 
-![Holdout error by model](results/1_holdout_error.png)
+![Holdout error by model](1_holdout_error.png)
 
 *Average prediction miss (RMSE) on the 2023-24 draft classes (26 players). Lower is better. Grey bars are benchmarks.*
 
@@ -63,7 +63,7 @@ The regression using college stats and draft slot missed by about 4.8 on average
 
 ### Predicted versus actual
 
-![Predicted versus actual](results/2_pred_vs_actual.png)
+![Predicted versus actual](2_pred_vs_actual.png)
 
 *Each dot is a player, using only predictions made without seeing that player (grey: cross-validated, red: holdout). Dots on the dashed line are perfect predictions.*
 
@@ -71,13 +71,13 @@ Both models give loose clouds, consistent with a typical miss of about 5. The ra
 
 ### What drove the predictions
 
-![Regression coefficients](results/3_coefficients.png)
+![Regression coefficients](3_coefficients.png)
 
 *Multiple regression coefficients per one standard deviation, with 95% intervals (n = 110, fit on all players, so descriptive). The conference flag is a yes/no variable.*
 
 Scoring (p = 0.003), offensive rebounding (p = 0.005) and assists (p = 0.002) per 40 were clearly positive, and later draft slots were associated with lower output (p = 0.04). The conference flag and all four pressure and clutch features have intervals that cross zero, which means the data cannot distinguish them from no effect. The model explains about 46% of the variation in this sample (about 37% adjusted for the number of predictors). Several predictors overlap heavily (defensive rebounds correlate 0.72 with both offensive rebounds and blocks), so individual coefficients for those stats are unstable.
 
-![Simple regressions](results/4_simple_regressions.png)
+![Simple regressions](4_simple_regressions.png)
 
 *One stat at a time against WNBA output, with the fitted line and R-squared.*
 
@@ -101,7 +101,7 @@ Rebounding, blocking and passing rates stay the most consistent across levels, a
 
 ### Sensitivity to the minutes cutoff
 
-![Sensitivity](results/5_sensitivity.png)
+![Sensitivity](5_sensitivity.png)
 
 *The same comparison rerun on players with at least 0, 100, 200 and 300 WNBA minutes (143, 110, 93 and 83 players). Compare lines within a panel, not across cutoffs.*
 
@@ -109,7 +109,7 @@ Every line falls as the cutoff rises, because outcomes from more minutes are les
 
 ### Did they stick?
 
-![Share reaching playing-time thresholds](results/6_stick.png)
+![Share reaching playing-time thresholds](6_stick.png)
 
 *Share of the 220 drafted players (with college stats) reaching each total-minutes threshold in their first two WNBA seasons.*
 
